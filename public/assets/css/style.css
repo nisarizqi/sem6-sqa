@@ -852,23 +852,30 @@ ol {
   line-height: 55px;
   margin-bottom: 22px;
 }
-.callto__text p {
-  font-size: 15px;
+.callto__text h4 {
+  font-size: 22px;
   color: #ffffff;
   opacity: 0.7;
   text-transform: uppercase;
   margin-bottom: 55px;
 }
-.callto__text a {
+.callto__text p {
+  font-size: 17px;
   color: #ffffff;
-  background: #00bfe7;
+  opacity: 1;
+  /* text-transform: uppercase; */
+  margin-bottom: 55px;
+}
+.callto__text a {
+  color: #ffe77a;
+  /* background: #00bfe7; */
   font-size: 15px;
   font-weight: 700;
   font-family: "Play", sans-serif;
   letter-spacing: 2px;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   display: inline-block;
-  padding: 14px 32px 12px;
+  /* padding: 14px 32px 12px; */
 }
 
 /*---------------------

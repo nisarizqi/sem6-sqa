@@ -20,4 +20,5 @@ Route::post('/2FA', [TwoFAController::class, 'verify'])->middleware('auth')->nam
 
 Auth::routes();
 
+Route::get('/home-no2FA', [HomeController::class, 'clearSecretKey'])->middleware('auth')->name('home-no2FA');
 Route::get('/home', [HomeController::class, 'index'])->middleware('auth')->name('home');

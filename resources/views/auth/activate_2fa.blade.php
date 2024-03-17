@@ -51,7 +51,7 @@
                         @else
                         <div class="text-right">
                         <br>
-                            <a href="{{ route('home') }}"><p>Set up later</p></a>
+                            <a href="{{ route('home-no2FA') }}"><p>Set up later</p></a>
                         </div>
                         @endif
                     </div>

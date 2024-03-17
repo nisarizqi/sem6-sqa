@@ -18,14 +18,20 @@ class TwoFAController extends Controller
 
     public function show(Request $request){
 
+        // get user data
+        $user = Auth::user();
+
+        if($user->google2fa_secret != null){
+            $request->session()->put('2FA:user:activated', true);
+        } else {
+            $request->session()->put('2FA:user:activated', false);
+        }
+
         // initialize 2fa class
         $google2fa = app('pragmarx.google2fa');
 
         // generate secret key for 2fa 
         $secret_key = $google2fa->generateSecretKey();
-
-        // get user data
-        $user = Auth::user();
 
         $request->session()->put('google2fa_secret', $secret_key);
 

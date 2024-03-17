@@ -9,7 +9,13 @@
                 <div class="col-lg-8">
                     <div class="callto__text">
                         <h2>Welcome back, <b>{{ auth()->user()->username }}</b>!</h2>
-                        <p>Software Quality Assurance</p>
+                        <h4>Software Quality Assurance</h4>
+                        @if(session()->has('2FA:user:activated') && session('2FA:user:activated'))
+                        @else
+                        <div class="text-left">
+                        <p>You haven't enable <b>Two-Factor Authentication</b>. <br> <a href="{{ route('2FA') }}">Activate now</a></p>
+                        </div>
+                        @endif
                         <form action="{{ route('logout') }}" method="POST">
                         @csrf
                         <button type="submit" class="logout-btn">Logout</button>
