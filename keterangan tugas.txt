@@ -1,6 +1,0 @@
-Buat Web dgn Fitur
-
-- Register
-- Login
-- Captcha ketika login gagal 3 kali
-- 2FA setelah login
